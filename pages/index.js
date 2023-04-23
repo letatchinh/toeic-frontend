@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import { Inter } from '@next/font/google'
 import '../firebase/firebase.js'
 import Layout from 'components/Layout'
 import CardBlog from 'components/blog/CardBlog.js'
 import CardBlogMultiImage from 'components/blog/CardBlogMultiImage.js'
 import { Col, Row } from 'antd'
-const inter = Inter({ subsets: ['latin'] })
+import CardCourse from 'components/course/CardCourse.js'
+import GroupCourse from 'components/home/GroupCourse.js'
+import VideoHomePage from 'components/home/VideoHomePage.js'
 export default function Home() {
   return (
 <Layout>
@@ -23,11 +24,41 @@ export default function Home() {
         />
       </Head>
       <div className='home-page'>
-      <Row>
-      <Col span={4}><CardBlog /></Col>
-      <Col span={4}><CardBlogMultiImage /></Col>
-      
+      <div>
+        <VideoHomePage/>
+      </div>
+      <Row gutter={16}> 
+      <Col span={6}>
+      <div className='columnBox'>
+      <CardBlog />
+      <CardBlogMultiImage />
+      </div>
+      </Col>
+      <Col span={6}>
+      <div className='columnBox'>
+      <CardBlogMultiImage />
+      <CardBlog />
+      </div>
+      </Col>
+      <Col span={6}>
+      <div className='columnBox'>
+      <CardBlog />
+      <CardBlogMultiImage />
+      </div>
+      </Col>
+      <Col span={6}>
+      <div className='columnBox'>
+      <CardBlogMultiImage />
+      <CardBlog />
+      </div>
+      </Col>
       </Row>
+
+      {/* //////////////////////////////////////////////////////////////// */}
+      <div>
+        <GroupCourse />
+      </div>
+     
       </div>
     </Layout>
   )

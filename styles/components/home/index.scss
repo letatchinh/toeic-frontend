@@ -1,0 +1,17 @@
+.videoHomePage{
+    padding: 10rem 20rem;
+    text-align: center;
+    &--video{
+        border-radius: 20px;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow:  0 0 4px 2px #888;
+    }
+    &--title{
+        padding: 40px 0;
+    }
+   
+}

@@ -1,8 +1,16 @@
-import Header from 'components/home/Header'
+// import Header from 'components/home/Header'
+import { Header } from 'antd/es/layout/layout'
 import Head from 'next/head'
 import React from 'react'
 import Footer from './Footer'
-
+const headerStyle = {
+  textAlign: 'center',
+  color: '#fff',
+  height: 64,
+  paddingInline: 50,
+  lineHeight: '64px',
+  backgroundColor: '#7dbcea',
+};
 export default function index({children}) {
   return (
     <div className='layout'>
@@ -21,7 +29,9 @@ export default function index({children}) {
         rel='stylesheet'
       /> */}
     </Head>
-      <Header />
+      <Header style={headerStyle}>
+        Header
+      </Header>
       <main className='main'>{children}</main>
 
       <Footer />

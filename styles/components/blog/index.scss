@@ -1,0 +1,55 @@
+.cardBlog{
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow:  0 0 7px 1px #9e9e9e;
+    & img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+    &--image{
+        // height: 50%;
+        &__twice{
+            height: 16vw;
+            & img{
+                box-shadow: 0 0 7px 1px #9e9e9e;
+            }
+        }
+        &__single{
+            height: 25vw;
+        }
+    }
+    
+    &--title{
+       padding: 30px 10px;
+       & span {
+        font-size: calc(1vw + 0.2rem);
+        &:hover{
+            color: orange;
+            transition: 0.5s ease;
+            cursor: pointer;
+           }
+       }
+    }
+    &--action{
+        padding-left: 10px;
+        &__group{
+            cursor: pointer;
+            align-items: center;
+            margin: 0 5px 5px 5px;
+            gap: 2px;
+            font-size: 2rem;
+            & .heartActive{
+                color: red;
+            }
+            & .sendActive ,.commentActive{
+                color: rgb(55, 0, 255);
+            }
+        }
+    }
+}
+.columnBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
