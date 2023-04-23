@@ -1,0 +1,140 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: $color-white;
+    border-radius: 100px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &--primary {
+    background: linear-gradient(90.54deg, #3a7cff 0.47%, #35d2b9 99.54%);
+    font-family: Roboto-bold;
+    &.ant-btn {
+      height: auto;
+    }
+  }
+
+  &--secondary {
+    background: linear-gradient(
+      11.97deg,
+      #103393 -0.51%,
+      #3481ff 81.1%,
+      #00d4ff 170.56%
+    );
+    font-family: Roboto-bold;
+    &:hover,
+    &:active,
+    &:focus {
+      background: linear-gradient(
+        11.97deg,
+        darken($color: #103393, $amount: 6%) -0.51%,
+        darken($color: #3481ff, $amount: 6%) 81.1%,
+        darken($color: #00d4ff, $amount: 6%) 170.56%
+      );
+      color: $color-white
+    }
+    &.ant-btn {
+      height: auto;
+       & > span{
+        font-family: Roboto-bold;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        background: linear-gradient(
+          11.97deg,
+          darken($color: #103393, $amount: 6%) -0.51%,
+          darken($color: #3481ff, $amount: 6%) 81.1%,
+          darken($color: #00d4ff, $amount: 6%) 170.56%
+        );
+        color: $color-white
+      }
+    }
+  }
+
+  &--danger {
+    background: linear-gradient(
+      11.97deg,
+      #9c0505 -0.51%,
+      #f96666 81.1%,
+      #ffd8d8 170.56%
+    );
+    font-family: Roboto-bold;
+    &:hover,
+    &:active,
+    &:focus {
+      background: linear-gradient(
+        11.97deg,
+        darken($color: #9c0505, $amount: 6%) -0.51%,
+        darken($color: #f96666, $amount: 6%) 81.1%,
+        darken($color: #ffd8d8, $amount: 6%) 170.56%
+      );
+      color: $color-white
+    }
+    &.ant-btn {
+      height: auto;
+      &:hover,
+      &:active,
+      &:focus {
+        background: linear-gradient(
+          11.97deg,
+          darken($color: #9c0505, $amount: 6%) -0.51%,
+          darken($color: #f96666, $amount: 6%) 81.1%,
+          darken($color: #ffd8d8, $amount: 6%) 170.56%
+        );
+        color: $color-white
+      }
+    }
+  }
+
+  &--green {
+    background: $color-green;
+    color: $color-grey;
+    font-family: Roboto-bold;
+    &:hover,
+    &:active,
+    &:focus{
+      color: $color-grey;
+      border-color: $color-green;
+      background-color: $color-green;
+    }
+    &[disabled] {
+      background: $color-green !important;
+      color: $color-grey;
+    }
+    &.ant-btn {
+      height: auto;
+      & > span{
+        font-family: Roboto-bold;
+      }
+    }
+
+  }
+
+  &--tag {
+    padding-left: 3.3rem;
+    padding-right: 3.3rem;
+    color: $color-blue;
+    background-color: $color-grey;
+    font-family: Roboto-medium;
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+}

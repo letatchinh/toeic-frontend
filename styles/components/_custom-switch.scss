@@ -1,0 +1,36 @@
+.custom-switch {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  .ant-form-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .switch-label {
+    margin-bottom: 16px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: $color-primary;
+  }
+  .custom-switch-input {
+    height: 31px;
+    width: 51px;
+    line-height: 31px;
+    margin-right: 5px;
+    &.ant-switch-checked {
+      .ant-switch-handle {
+        left: calc(100% - 31px);
+      }
+    }
+    .ant-switch-handle {
+      width: 31px;
+      height: 31px;
+      top: 0;
+      left: 0;
+      &::before {
+        border-radius: 100px;
+      }
+    }
+  }
+}

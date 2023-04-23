@@ -1,0 +1,78 @@
+// RESPONSIVE BREAKPOINTS
+$xxl-1: 120em; // 1920px
+$xxl: 100em; // 1600px
+$main-app-br: 90em; // 1440px
+
+$header-bp: 70em; // 1120px
+$header-bp-2: 40em; // 640px
+
+$bl: 128rem; //1280
+$xl: 75em; // 1200px
+$lg: 62em; // 992px
+$md: 48em; // 768px;
+$sm: 37.5em; // 600px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Roboto-regular;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+  // @media only screen and (max-width: $xl) {
+  //   font-size: 54.5%; // 8.75px/16px = 54.5% -> 1rem = 8.75px  default-font-size = 1.6rem = 14px
+  // }
+
+  @media only screen and (max-width: $xl) {
+    font-size: 50%; // 8px/16px = 62.5% -> 1rem = 8px
+  }
+
+  @media only screen and (max-width: $md) {
+    font-size: 43.375%; //7px/16px = 62.5% -> 1rem = 7px
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  p,
+  a,
+  div,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto-regular;
+  }
+
+  white-space: pre-line; // support line breaks for i18n strings that have \n
+}
+
+.new-font {
+  p,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  label {
+    font-family: roboto;
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}

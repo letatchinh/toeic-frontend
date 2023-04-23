@@ -1,0 +1,40 @@
+.ant-carousel .slick-slider:not(.ant-carousel--origin) {
+  .slick-list {
+    border-radius: 24px !important;
+  }
+
+  .slick-dots {
+    li {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        width: 8px;
+        height: 8px;
+        border-radius: 16px;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .slick-dots li.slick-active button {
+    width: 16px;
+    height: 16px;
+    transform-origin: center;
+    background-color: $color-blue;
+  }
+}
+
+.ant-carousel--origin {
+  .slick-dots li button {
+    &::before {
+      content: none;
+    }
+  }
+}

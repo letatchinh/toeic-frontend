@@ -1,0 +1,125 @@
+@import 'header';
+@import 'header-white';
+@import 'footer';
+@import 'welcome-modal';
+
+// @import 'header';
+
+.layout {
+  min-height: 100vh;
+
+  .footer {
+    margin-top: auto;
+  }
+
+  .container {
+    width: 144rem;
+    margin: 0 auto;
+    max-width: 1920px;
+
+    @media only screen and (max-width: $main-app-br) {
+      width: auto;
+      height: auto;
+      display: grid;
+      grid-template-columns: minmax(10px, 1fr) 112.8rem minmax(10px, 1fr);
+
+      & > :nth-child(1) {
+        width: 100%;
+        grid-column: 2/3;
+      }
+    }
+
+    @media only screen and (max-width: $lg) {
+      width: 100%;
+      display: block;
+      padding: 2rem;
+    }
+  }
+
+  &__action-btn {
+    width: 50px;
+    height: 50px;
+    right: 17px;
+    margin: 0 12px;
+
+    position: fixed;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 99;
+    display: inline-block;
+    line-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+      position: absolute;
+      content: ' ';
+      z-index: -1;
+      top: -15px;
+      left: -15px;
+
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      animation-fill-mode: both;
+      -webkit-animation-fill-mode: both;
+      opacity: 0.6;
+      -webkit-animation: pulse 1s ease-out;
+      animation: pulse 1.8s ease-out;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+
+    &--email {
+      bottom: 174px;
+      background: #fbbf24;
+
+      &::before {
+        background-color: #fbbf24;
+      }
+    }
+
+    &--phone {
+      bottom: 110px;
+      background: #60a5fa;
+
+      &::before {
+        background-color: #60a5fa;
+      }
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .zalo-chat-widget{
+    max-height: 100%;
+    width: 50px;
+    height: 50px;
+    margin: 0 12px;
+    position: fixed;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 80;
+    display: inline-block;
+    line-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: auto !important;
+  
+    bottom: 180px !important;
+    right: 15px !important;
+    color: transparent;
+    &::before {
+      background-color: #60a5fa;
+    } 
+  }
+ 
+}
+

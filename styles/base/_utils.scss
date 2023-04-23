@@ -1,0 +1,38 @@
+.u-text-content {
+  font-family: Roboto-regular;
+  color: $color-primary;
+  line-height: $default-line-height;
+  font-size: $default-font-size;
+}
+
+.u-text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: $md) {
+  .u-text-content {
+    line-height: 32px;
+  }
+}
+
+.u-secondary-text {
+  font-family: roboto;
+  color: $color-primary;
+  line-height: $default-line-height;
+  font-size: $default-font-size;
+}
+
+.u-text-white {
+  color: $color-white !important;
+}
+.hidden {
+  display: none;
+}
+
+.justify-content-end {
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important; 
+}

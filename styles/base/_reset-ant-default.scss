@@ -1,0 +1,170 @@
+// REMOVE OUTLINE ON FOCUS
+.ant-select-single .ant-select-selector::after,
+.ant-select-single .ant-select-selector .ant-select-selection-item::after,
+.ant-select-single
+  .ant-select-selector
+  .ant-select-selection-placeholder::after {
+  display: none !important;
+}
+
+.ant-select,
+.ant-select-selector {
+  &,
+  &:focus,
+  &:hover,
+  &:visited {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+//  Carousel
+.slick-dots.slick-dots-bottom {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.apointment-form-modal {
+  width: 59.4rem !important;
+  height: 50rem;
+
+  .ant-modal-content {
+    border-radius: 24px;
+  }
+
+  .ant-modal-close {
+    top: 1rem;
+    right: 1rem;
+
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+.apointment-form {
+  &__bg {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 32px;
+    margin-top: 4.2rem;
+    margin-bottom: 1rem;
+    color: $color-primary;
+    font-family: Roboto-sm-bold;
+  }
+
+  &__select-time {
+    padding-left: 1.5rem !important;
+
+    .ant-select-selection-placeholder {
+      font-family: Roboto-regular !important;
+      font-size: 16px !important;
+      color: #a1a4ac !important;
+    }
+  }
+
+  &--sticky {
+    position: sticky;
+    top: 80px;
+    box-shadow: 0px 5px 50px rgba(58, 124, 255, 0.15);
+    border-radius: 24px;
+    padding: 20px;
+
+   .apointment-form__title {
+     margin-top: 1.2rem;
+   }
+  }
+}
+
+.custom-date-picker {
+  display: flex;
+  align-items: center;
+  height: 6.2rem !important;
+  border-radius: 10px !important;
+  border: 1px solid $color-border-grey;
+  padding: 1.5rem;
+
+  &--small {
+    height: 5.1rem !important;
+
+    input {
+      font-family: roboto !important;
+
+      &::-webkit-input-placeholder {
+        color: $color-primary;
+        opacity: 0.4;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &--disabled {
+    background-color: #f5f5f5;
+  }
+
+  svg {
+    margin-right: 2rem;
+  }
+
+  .ant-picker,
+  .ant-picker-focused {
+    width: 100%;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding-left: 0;
+
+    .ant-picker-clear,
+    .ant-picker-suffix {
+      display: none;
+    }
+  }
+
+  .ant-picker-input {
+    input {
+      font-family: Roboto-medium;
+      font-size: 16px;
+      color: $color-primary;
+    }
+  }
+}
+
+.custom-text-area {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 10px !important;
+  border: 1px solid $color-border-grey;
+  padding: 1.5rem;
+
+  svg {
+    margin-right: 2rem;
+  }
+
+  textarea {
+    &,
+    &:focus,
+    &:active,
+    &:visited {
+      width: 100%;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      padding-left: 0;
+      font-family: Roboto-regular;
+      font-size: 16px;
+      color: $color-primary;
+    }
+  }
+}

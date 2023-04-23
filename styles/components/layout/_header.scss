@@ -1,0 +1,370 @@
+.header {
+  min-height: 8.6rem;
+  display: flex;
+  align-items: center;
+  // padding: 0 2.3rem;
+  // max-width: 120em;
+  width: 100%;
+  position: fixed;
+  margin: 0 auto;
+  // padding: 1.6rem;
+  top: 0;
+  //   right: 0;
+  z-index: 200;
+  background-color: #ffffff;
+  box-shadow:   0 2px 4px rgba(15,34,58,.12);
+  flex-wrap: wrap;
+& .ant-menu-submenu-title span , .ant-menu-item a{
+  font-size: 1.5rem!important;
+  @media only screen and (max-width : $xl) {
+    font-size: 1.8rem!important;
+  }
+}
+  & > *:first-child {
+    cursor: pointer;
+  }
+  & .ant-menu-item{
+    // & a{
+    //   font-size: 1.5rem!important;
+    // }
+  }
+  &__navbar {
+    margin-left: 3.4rem;
+    border-bottom: none;
+    // margin-right: auto;
+  }
+
+  &__user-dropdown {
+    .ant-dropdown-menu {
+      border-radius: 16px;
+      overflow: hidden;
+      color: $color-primary;
+      li {
+        padding: 8px 20px;
+        a {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    margin-left: auto!important;
+    .header {
+      &__order-btn {
+        padding-left: 1.7rem;
+        padding-right: 1.7rem;
+        height: 4rem;
+      }
+      &__account-action {
+        padding-left: 1.7rem;
+        .btn {
+          padding-left: 2rem;
+          padding-right: 2rem;
+          height: 4rem;
+        }
+      }
+      &__user-icon {
+        color: $color-primary;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__text {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
+      &__select-city {
+        margin-right: 1rem;
+        min-width: 135px !important;
+        display: flex;
+        align-items: center;
+
+        .ant-select-selector {
+          background-color: $color-grey;
+          height: 4rem;
+        }
+      }
+    }
+  }
+
+  &-navbar {
+    &__navbar-item {
+      svg {
+        fill: $color-white;
+      }
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+
+    &__submenu-popup:not(.header-navbar__submenu-popup--vertical) {
+      border: 1px solid $color-border-grey;
+      border-radius: 16px;
+
+      .ant-menu-vertical .ant-menu-item:not(:last-child),
+      .ant-menu-vertical-left .ant-menu-item:not(:last-child),
+      .ant-menu-vertical-right .ant-menu-item:not(:last-child),
+      .ant-menu-inline .ant-menu-item:not(:last-child) {
+        margin: 0;
+      }
+
+      .ant-menu-sub {
+        border-radius: 16px;
+      }
+
+      .ant-menu-item {
+        height: 5.6rem;
+        border-bottom: 1px solid $color-border-grey;
+        margin: 0;
+        padding-left: 1.9rem;
+        display: flex;
+        align-items: center;
+        a {
+          font-size: $default-font-size;
+          line-height: 2rem;
+          font-family: Roboto-medium;
+          color: $color-primary;
+          vertical-align: middle;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          width: 100%;
+        }
+        p {
+          font-size: $default-font-size;
+          line-height: 2rem;
+          font-family: Roboto-medium;
+          color: $color-primary;
+          vertical-align: middle;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          width: 100%;
+        }
+      }
+    }
+
+    &__submenu-popup--vertical {
+      .ant-menu-item {
+        border-bottom: 1px solid $color-border-grey;
+        margin-bottom: 0;
+        a {
+          font-size: $default-font-size;
+          font-family: Roboto-medium;
+          color: $color-primary;
+        }
+        p {
+          font-size: $default-font-size;
+          font-family: Roboto-medium;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+.searchBox{
+  flex: 1;
+  padding: 5px 2rem;
+  overflow: hidden;
+  border: 1px solid #D8E6FF;
+  border-radius: 20px;
+  & button{
+    padding: 0!important;
+  }
+}
+// OVERIDE ANT NAVBAR
+.header,
+.header-navbar--vertical {
+  .ant-menu-horizontal {
+    border-bottom: none;
+    margin-left: 2.5rem;
+  }
+
+  .ant-menu-item,
+  .ant-menu-submenu-title {
+    p {
+      font-size: 14px;
+      font-family: Roboto-sm-bold;
+      color: $color-primary;
+    }
+    a {
+      font-size: 14px;
+      font-family: Roboto-sm-bold;
+      color: $color-primary;
+    }
+  }
+
+  .ant-menu-submenu-title {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    span {
+      font-size: 14px;
+      font-family: Roboto-sm-bold;
+      color: $color-primary;
+    }
+
+    svg {
+      margin-left: 5px;
+    }
+  }
+
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu {
+    margin: 0 10px;
+    font-family: Roboto-regular;
+  }
+
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+    color: $color-primary;
+    border-bottom: 2px solid $color-primary;
+  }
+
+  &--white {
+    background-color: $color-blue;
+
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
+    .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+      color: $color-white;
+      border-bottom: 2px solid $color-white;
+    }
+
+    .ant-menu-submenu-title {
+      color: $color-white;
+    }
+  }
+
+  // OVERIDE ANT SELECT
+  &__actions {
+    display: flex;
+    align-items: center;
+
+    .ant-select-selection-item {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.header-navbar--vertical {
+  .ant-menu-submenu-title {
+    display: block;
+    font-size: 14px;
+    font-family: Roboto-sm-bold;
+    color: $color-primary;
+  }
+
+  .ant-menu-item,
+  .ant-menu-submenu {
+    padding-left: 12px !important;
+  }
+
+  .ant-menu-submenu-title {
+    padding-left: 0px !important;
+  }
+
+  .ant-menu-submenu-selected {
+    .ant-menu-submenu-title {
+      color: #1890ff;
+    }
+  }
+
+  .ant-menu-item-selected {
+    background-color: $color-grey !important;
+  }
+}
+
+.header-navbar__navbar-vertical-icon {
+  display: none;
+}
+
+.header-navbar--vertical {
+  .menu-item--show-sm-only {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: $header-bp) {
+  .header-navbar__navbar-vertical-icon {
+    display: block;
+    margin-left: 1rem;
+  }
+
+  .header-navbar--horizontal {
+    display: none;
+  }
+
+  .header__actions {
+    margin-left: auto;
+  }
+  .searchBox{
+    margin-left: 10px;
+   flex: 1;
+    & button{
+      padding: 2px!important;
+    }
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .header {
+    &__order-btn {
+      display: none !important;
+    }
+
+   
+
+    &__select-city {
+      display: none !important;
+    }
+    
+  }
+
+  .header-navbar--vertical {
+    .menu-item--show-sm-only {
+      display: flex !important;
+      height: 45px;
+      align-items: center;
+
+      .header__order-btn--vertical {
+        display: flex !important;
+        height: 3.4rem;
+        width: 100%;
+        height: 5.4rem;
+      }
+
+      .header__select-city--vertical {
+        display: block !important;
+        width: 100%;
+
+        .ant-select-selector {
+          background-color: $color-grey;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width : $header-bp){
+  .header{
+    &__account-action {
+      display: none !important;
+    }
+  }
+}

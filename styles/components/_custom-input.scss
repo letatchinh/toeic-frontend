@@ -1,0 +1,137 @@
+.custom-input {
+  height: 6.4rem;
+  padding-left: 1.6rem;
+  border-radius: 10px;
+
+  input {
+    margin-left: 1.6rem;
+    font-size: $default-font-size;
+    color: $color-primary;
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-weight;
+    }
+  }
+
+  .ant-input-prefix {
+    width: 25px;
+    min-width: 25px;
+  }
+}
+
+.custom-input--after {
+  input {
+    height: 5rem;
+    padding-left: 1.6rem;
+    border-radius: 10px;
+
+    font-size: $default-font-size;
+    color: $color-primary;
+
+    &::-webkit-input-placeholder {
+      color: $color-primary;
+      opacity: 0.4;
+    }
+  }
+
+  .ant-input-group-addon {
+    color: $color-primary;
+  }
+}
+.custom-input--normal {
+  height: 5rem;
+  padding-left: 1.6rem;
+  border-radius: 10px;
+
+  font-size: $default-font-size;
+  color: $color-primary;
+
+  &::-webkit-input-placeholder {
+    color: $color-primary;
+    opacity: 0.4;
+  }
+
+  .ant-input-group-addon {
+    color: $color-primary;
+  }
+}
+
+.custom-input--number {
+  width: 100%;
+  border-radius: 10px;
+
+  .ant-input-number-handler-wrap {
+    border-radius: 0 10px 10px 0;
+  }
+
+  input {
+    height: 5rem;
+    padding-left: 1.6rem;
+
+    font-size: $default-font-size;
+    color: $color-primary;
+
+    &::-webkit-input-placeholder {
+      color: $color-primary;
+      opacity: 0.4;
+    }
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.integer-step__input-number {
+  font-family: roboto;
+  color: $color-primary;
+  font-size: 16px;
+}
+
+.ant-table {
+  font-family: roboto !important;
+  color: $color-primary;
+
+  .ant-table-thead > tr > th {
+    font-family: roboto-medium !important;
+    color: $color-primary;
+  }
+}
+.code-inputs {
+  display: flex;
+  justify-content: center;
+  .code-input {
+    height: 6.4rem;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    text-align: center;
+    max-width: 6.4rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    &:focus,
+    &:hover {
+      border: 1px solid #40a9ff;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      outline:none;
+    }
+  }
+  .code-input + .code-input {
+    margin-left: 1rem;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .code-inputs {
+    .code-input {
+      max-width: 5rem;
+    }
+  }
+}
