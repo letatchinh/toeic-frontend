@@ -7,7 +7,7 @@ export default function CardBlog() {
     <div className='cardBlog'>
         <div className='cardBlog--image'>
         <div className='cardBlog--image__single'>
-            <img src='https://i.pinimg.com/564x/c0/64/68/c06468b361adae389622af7c975ddf32.jpg' alt='card'/>
+            <img src='https://i.pinimg.com/564x/f6/14/5b/f6145b4ef5e81ac437628538f9d58554.jpg' alt='card'/>
         </div>
         </div>
         <div className='cardBlog--title'>

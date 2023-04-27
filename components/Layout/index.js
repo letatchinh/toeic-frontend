@@ -1,5 +1,5 @@
 // import Header from 'components/home/Header'
-import { Header } from 'antd/es/layout/layout'
+// import Layout from 'antd/es/layout'
 import Head from 'next/head'
 import React from 'react'
 import Footer from './Footer'
@@ -11,6 +11,7 @@ const headerStyle = {
   lineHeight: '64px',
   backgroundColor: '#7dbcea',
 };
+// const {Header} = Layout
 export default function index({children}) {
   return (
     <div className='layout'>
@@ -29,9 +30,9 @@ export default function index({children}) {
         rel='stylesheet'
       /> */}
     </Head>
-      <Header style={headerStyle}>
+      {/* <Header style={headerStyle}> */}
         Header
-      </Header>
+      {/* </Header> */}
       <main className='main'>{children}</main>
 
       <Footer />

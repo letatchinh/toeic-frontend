@@ -3,7 +3,7 @@ import '../firebase/firebase.js'
 import Layout from 'components/Layout'
 import CardBlog from 'components/blog/CardBlog.js'
 import CardBlogMultiImage from 'components/blog/CardBlogMultiImage.js'
-import { Col, Row } from 'antd'
+import { Carousel, Col, Row } from 'antd'
 import CardCourse from 'components/course/CardCourse.js'
 import GroupCourse from 'components/home/GroupCourse.js'
 import VideoHomePage from 'components/home/VideoHomePage.js'
@@ -28,28 +28,33 @@ export default function Home() {
         <VideoHomePage/>
       </div>
       <Row gutter={16}> 
-      <Col span={6}>
+      <Col span={12}>
       <div className='columnBox'>
-      <CardBlog />
+     <Carousel autoplay dots={false}>
+     <CardBlog />
+     <CardBlog />
+     <CardBlog />
+     </Carousel>
+      <Carousel autoplay dots={false}>
       <CardBlogMultiImage />
+      <CardBlogMultiImage />
+      <CardBlogMultiImage />
+      </Carousel>
       </div>
       </Col>
-      <Col span={6}>
+      <Col span={12}>
       <div className='columnBox'>
+     <Carousel autoplay dots={false}>
+    
+     <CardBlogMultiImage />
       <CardBlogMultiImage />
-      <CardBlog />
-      </div>
-      </Col>
-      <Col span={6}>
-      <div className='columnBox'>
-      <CardBlog />
       <CardBlogMultiImage />
-      </div>
-      </Col>
-      <Col span={6}>
-      <div className='columnBox'>
-      <CardBlogMultiImage />
+     </Carousel>
+      <Carousel autoplay dots={false}>
       <CardBlog />
+     <CardBlog />
+     <CardBlog />
+      </Carousel>
       </div>
       </Col>
       </Row>

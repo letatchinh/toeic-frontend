@@ -1,7 +1,18 @@
 .cardCourse{
     border-radius: 20px;
+    max-height: calc(100px + 16vw);
     overflow: hidden;
+    cursor: pointer;
+    overflow: hidden;
+    &:hover{
+        .cardCourse--body{
+            background-color: #9AA599!important;
+            transform: translateY(-50px);
+        }
+    }
     &--body{
+        height: 200px;
+        transition: 0.5s ease;
         padding: 10px 20px;
         background-color: #606060;
         & h4{
