@@ -17,7 +17,12 @@ $fontReem : Reem Kufi Ink;
         background-color: #EDDB3E;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         position: relative;
+        line-height: 5rem;
+        text-align: center;
+        padding-right: 20rem;
+       letter-spacing: 1px;
         &__image{
             position: absolute;
             bottom: 0;
@@ -25,7 +30,20 @@ $fontReem : Reem Kufi Ink;
             width: 1100px
         }
         &__text{
-            width: 45%;
+            width: 49%;
+            & .classic{
+                font-size: 3rem;
+            }
+            & .bold{
+                font-weight: 700;
+                font-size: 4rem;
+                & .bgBlack{
+                    background-color: black;
+                    padding: 0 3px;
+                    color: #EDDB3E;
+                }
+            }
+            
         }
     }
    
