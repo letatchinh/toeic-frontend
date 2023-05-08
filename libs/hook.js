@@ -1,10 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import useSWR from 'swr';
-import { get, sortBy } from 'lodash';
-import { getSession } from 'next-auth/client';
+// import { getSession } from 'next-auth/client';
 
-import { getBaseURL } from 'lib/api/requester';
+// import { getBaseURL } from 'lib/api/requester';
 
 const MEDIA = {
   LG: 'LG',
@@ -175,135 +173,135 @@ export const useMergeState = initialState => {
 };
 
 const fetcher = (...args) => fetch(...args).then(res => res.json());
-const fetchWithToken = async (...args) => {
-  const session = await getSession();
-  return fetch(...args, {
-    headers: {
-      Authorization: `Bearer ${session?.accessToken}`,
-    },
-  }).then(res => res.json());
-};
+// const fetchWithToken = async (...args) => {
+//   const session = await getSession();
+//   return fetch(...args, {
+//     headers: {
+//       Authorization: `Bearer ${session?.accessToken}`,
+//     },
+//   }).then(res => res.json());
+// };
 
 const swrConfig = {
   revalidateOnFocus: false,
 };
 
-export function usePackageLevels() {
-  const { data, error } = useSWR(
-    `${getBaseURL()}/api/v1/package-level?status=ACTIVE`,
-    fetcher,
-    swrConfig
-  );
+// export function usePackageLevels() {
+//   const { data, error } = useSWR(
+//     `${getBaseURL()}/api/v1/package-level?status=ACTIVE`,
+//     fetcher,
+//     swrConfig
+//   );
 
-  return {
-    packageLevels: data?.docs || [],
-    isLoading: !error && !data,
-    isError: error,
-  };
-}
+//   return {
+//     packageLevels: data?.docs || [],
+//     isLoading: !error && !data,
+//     isError: error,
+//   };
+// }
 
-export function useSessionsOfDay() {
-  const { data, error } = useSWR(
-    `${getBaseURL()}/api/v1/wh-session-of-day?status=ACTIVE`,
-    fetcher,
-    swrConfig
-  );
+// export function useSessionsOfDay() {
+//   const { data, error } = useSWR(
+//     `${getBaseURL()}/api/v1/wh-session-of-day?status=ACTIVE`,
+//     fetcher,
+//     swrConfig
+//   );
 
-  return {
-    sessionsOfDay: data?.docs || [],
-    isLoading: !error && !data,
-    isError: error,
-  };
-}
+//   return {
+//     sessionsOfDay: data?.docs || [],
+//     isLoading: !error && !data,
+//     isError: error,
+//   };
+// }
 
-export function useDistrict(cityCode) {
-  const { data, error } = useSWR(
-    cityCode ? `${getBaseURL()}/api/v1/city/${cityCode}/district` : null,
-    fetcher,
-    swrConfig
-  );
+// export function useDistrict(cityCode) {
+//   const { data, error } = useSWR(
+//     cityCode ? `${getBaseURL()}/api/v1/city/${cityCode}/district` : null,
+//     fetcher,
+//     swrConfig
+//   );
 
-  return {
-    districts: data,
-    isLoading: !error && !data,
-    isError: error,
-  };
-}
+//   return {
+//     districts: data,
+//     isLoading: !error && !data,
+//     isError: error,
+//   };
+// }
 
-export function useWard(districtCode) {
-  const { data, error } = useSWR(
-    districtCode
-      ? `${getBaseURL()}/api/v1/district/${districtCode}/ward`
-      : null,
-    fetcher,
-    swrConfig
-  );
+// export function useWard(districtCode) {
+//   const { data, error } = useSWR(
+//     districtCode
+//       ? `${getBaseURL()}/api/v1/district/${districtCode}/ward`
+//       : null,
+//     fetcher,
+//     swrConfig
+//   );
 
-  return {
-    wards: data,
-    isLoading: !error && !data,
-    isError: error,
-  };
-}
+//   return {
+//     wards: data,
+//     isLoading: !error && !data,
+//     isError: error,
+//   };
+// }
 
-export function useAddress() {
-  const { data, error, mutate } = useSWR(
-    `${getBaseURL()}/api/v1/me/address`,
-    fetchWithToken,
-    swrConfig
-  );
-  return {
-    addresses: data, // primary address should appear first
-    isLoading: !error && !data,
-    isError: error,
-    mutate,
-  };
-}
+// export function useAddress() {
+//   const { data, error, mutate } = useSWR(
+//     `${getBaseURL()}/api/v1/me/address`,
+//     fetchWithToken,
+//     swrConfig
+//   );
+//   return {
+//     addresses: data, // primary address should appear first
+//     isLoading: !error && !data,
+//     isError: error,
+//     mutate,
+//   };
+// }
 
-export function usePharmacy() {
-  const { data, error, mutate } = useSWR(
-    `${getBaseURL()}/api/v1/pharmacy`,
-    fetcher,
-    swrConfig
-  );
+// export function usePharmacy() {
+//   const { data, error, mutate } = useSWR(
+//     `${getBaseURL()}/api/v1/pharmacy`,
+//     fetcher,
+//     swrConfig
+//   );
 
-  return {
-    pharmacies: data,
-    isLoading: !error && !data,
-    isError: error,
-    mutate,
-  };
-}
+//   return {
+//     pharmacies: data,
+//     isLoading: !error && !data,
+//     isError: error,
+//     mutate,
+//   };
+// }
 
-export function useProfile() {
-  const { data, error, mutate } = useSWR(
-    `${getBaseURL()}/api/v1/profile`,
-    fetchWithToken,
-    swrConfig
-  );
+// export function useProfile() {
+//   const { data, error, mutate } = useSWR(
+//     `${getBaseURL()}/api/v1/profile`,
+//     fetchWithToken,
+//     swrConfig
+//   );
 
-  return {
-    profile: data,
-    isLoading: !error && !data,
-    isError: error,
-    mutate,
-  };
-}
+//   return {
+//     profile: data,
+//     isLoading: !error && !data,
+//     isError: error,
+//     mutate,
+//   };
+// }
 
-export function useCoupon(value) {
-  const { data, error, mutate } = useSWR(
-    value ? `${getBaseURL()}/api/v1/free-coupon` : null,
-    fetchWithToken,
-    swrConfig
-  );
+// export function useCoupon(value) {
+//   const { data, error, mutate } = useSWR(
+//     value ? `${getBaseURL()}/api/v1/free-coupon` : null,
+//     fetchWithToken,
+//     swrConfig
+//   );
 
-  return {
-    coupons: data?.data || [],
-    isLoading: !error && !data,
-    isError: error,
-    mutate,
-  };
-}
+//   return {
+//     coupons: data?.data || [],
+//     isLoading: !error && !data,
+//     isError: error,
+//     mutate,
+//   };
+// }
 
 export function useDebounce(value, delay) {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -386,3 +384,4 @@ export function ConvertPackageLevel({ data, locale }) {
 
   return [result.name, result.price, result.description];
 }
+export const getImgFromAssets = (link) => `/assets/images/${link}`

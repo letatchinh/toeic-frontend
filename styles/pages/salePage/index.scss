@@ -1,9 +1,11 @@
 $maxHeight : 920px;
 $heightmaxScreen : 100vh;
 $fontReem : Reem Kufi Ink;
-
+.gachCheo{
+    text-decoration: line-through;
+}
 .salePage{
-    & p ,a{
+    & p ,a,span,h3{
         font-family: $fontReem!important;
     }
     & img{
@@ -184,4 +186,101 @@ $fontReem : Reem Kufi Ink;
     }
    }
 
+   &--SoHuu{
+    background-color: #EEDB3E;
+    height: $heightmaxScreen;
+    max-height: $maxHeight;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 100px 50px;
+    overflow: hidden;
+    &__people{
+        position: absolute;
+        width: 78%;
+        bottom: 0;
+        transform: scaleX(-1);
+        left: -20%;
+        z-index: 1;
+    }
+    &__NetSon{
+        position: absolute;
+        width: 90%;
+        bottom: 0;
+        left: -40%;
+        transform: scale(2) rotate(-30deg);
+        z-index: 0;
+    }
+    &__MayBayGiay1{
+        position: absolute;
+        width: 20%;
+        top: 0%;
+        right: 0;
+        transform: scaleX(-1);
+        z-index: 0;
+        opacity: 0.7;
+    }
+    &__MayBayGiay2{
+        position: absolute;
+        width: 35%;
+        bottom: -25%;
+        left: 45%;
+        transform:  rotate(50deg);
+        z-index: 0;
+    }
+    &__right{
+        width: 65%;
+        text-align: center;
+        &__content{
+            font-size: 28px;
+            & span{
+                color: #C3227C;
+                font-size: 32px;
+            }
+        }
+    }
+   }
+   &--NoiDungKhoaHoc{
+    background-color: #C2217B;
+    background-image: url('/assets/images/salePage/backgroup2.png');
+    // background-size: 100%;
+    background-repeat: no-repeat;
+    height: $heightmaxScreen;
+    max-height: $maxHeight;
+    padding: 50px 100px;
+    &__title{
+        position: relative;
+        text-align: center;
+        &__bg{  
+            position: absolute;
+            width: 50%;
+            top: -150%;
+            transform: rotate(5deg);
+            left: 30%;
+            z-index: 0;
+        }
+        & h3{
+            position: relative;
+            color: black;
+            font-size: 40px;
+        }
+    }
+    &__content{
+        padding: 50px 0;
+        & .ant-collapse{
+            margin-bottom: 30px;
+        }
+        & .ant-collapse-header{
+            align-items: center!important;
+        }
+        & .ant-collapse{
+            background-color: #303030!important;
+            & .ant-collapse-header-text ,.ant-collapse-expand-icon{
+                color: white!important;
+                font-size: 24px !important;
+            }
+        }
+    }
+   }
 }
