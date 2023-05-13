@@ -4,6 +4,7 @@ import PageConDuong from 'components/salePage/PageConDuong'
 import PageDatDuoc from 'components/salePage/PageDatDuoc'
 import PageDauTuHocPhi from 'components/salePage/PageDauTuHocPhi'
 import PageNoiDungKhoaHoc from 'components/salePage/PageNoiDungKhoaHoc'
+import PagePhanQua from 'components/salePage/PagePhanQua'
 import PageSoHuu from 'components/salePage/PageSoHuu'
 import React from 'react'
 
@@ -17,6 +18,7 @@ export default function index() {
     <PageNoiDungKhoaHoc/>
     <PageDatDuoc />
     <PageSoHuu />
+    <PagePhanQua />
    </div>
 
   )

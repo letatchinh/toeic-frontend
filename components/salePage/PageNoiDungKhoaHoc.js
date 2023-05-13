@@ -1,7 +1,7 @@
 import { Collapse, Image } from 'antd'
-import gsap from 'gsap';
 import { getImgFromAssets } from 'libs/hook'
 import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
@@ -10,18 +10,6 @@ export default function PageNoiDungKhoaHoc() {
   const imgRef = useRef(null);
   useEffect(() => {
     const el = imgRef.current;
-    // gsap.fromTo(
-    //   el,
-    //   // {y : 1000},
-    //   { translateY : '100px',opacity : 0 },
-    //   {
-    //     // rotation: 180,
-    //     translateY: 0,
-    //     opacity:1,
-    //     duration: 3,
-    //     scrollTrigger: '.triggerSrcoll'
-    //   }
-    // );
    gsap.fromTo(el,{
     translateY : -100,
     opacity : 0
@@ -29,9 +17,9 @@ export default function PageNoiDungKhoaHoc() {
    {
     translateY : 0,
     opacity : 1,
-    duration : 3,
+    duration : 2,
     scrollTrigger :{
-      trigger : '.triggerSrcoll'
+      trigger : '.triggerSrcollNoiDung'
     }
    })
   }, []);
@@ -76,7 +64,7 @@ Lượng từ vựng vẫn tiếp tục được nạp vào ở giai đoạn nà
 </p>
       </Panel>
       </Collapse>
-      <Collapse className='triggerSrcoll'  size='large'  >
+      <Collapse className='triggerSrcollNoiDung'  size='large'  >
       <Panel  header="Tháng cuối cùng" key="1">
         <p>
         Bạn sẽ được học những từ vựng cuối cùng của khóa học.<br />

@@ -1,9 +1,28 @@
 import { Image } from 'antd'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 export default function Intro() {
+  const triggerRef = useRef(null);
+  useEffect(() => {
+    const el = triggerRef.current;
+   gsap.fromTo(el,{
+    translateX : -200,
+    opacity : 0
+   },
+   {
+    translateX : 0,
+    opacity : 1,
+    duration : 3,
+    scrollTrigger :{
+      trigger : '.triggerSrcollIntro'
+    }
+   })
+  }, []);
   return (
-    <div className='salePage--intro'>
-        <div className='salePage--intro__image'>
+    <div className='salePage--intro triggerSrcollIntro'>
+        <div ref={triggerRef} className='salePage--intro__image'>
             <Image preview={false} src='/assets/images/salePage/teacher.png'/>
         </div>
         <div className='salePage--intro__text'>

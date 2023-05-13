@@ -3,11 +3,14 @@ import '../firebase/firebase.js'
 import Layout from 'components/Layout'
 import CardBlog from 'components/blog/CardBlog.js'
 import CardBlogMultiImage from 'components/blog/CardBlogMultiImage.js'
-import { Carousel, Col, Row } from 'antd'
+import { Button, Carousel, Col, Row } from 'antd'
 import CardCourse from 'components/course/CardCourse.js'
 import GroupCourse from 'components/home/GroupCourse.js'
 import VideoHomePage from 'components/home/VideoHomePage.js'
+import { useRouter } from 'next/router.js'
 export default function Home() {
+  const routes = useRouter()
+  console.log(routes,'routes');
   return (
 <Layout>
       <Head>
@@ -24,6 +27,9 @@ export default function Home() {
         />
       </Head>
       <div className='home-page'>
+      <Button onClick={() => routes.push('/sale-page')}>
+        Sale page ở đây nè
+      </Button>
       <div>
         <VideoHomePage/>
       </div>
