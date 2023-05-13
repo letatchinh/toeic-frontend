@@ -1,8 +1,40 @@
 import { Collapse, Image } from 'antd'
+import gsap from 'gsap';
 import { getImgFromAssets } from 'libs/hook'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
+
 const {Panel} = Collapse
 export default function PageNoiDungKhoaHoc() {
+  const imgRef = useRef(null);
+  useEffect(() => {
+    const el = imgRef.current;
+    // gsap.fromTo(
+    //   el,
+    //   // {y : 1000},
+    //   { translateY : '100px',opacity : 0 },
+    //   {
+    //     // rotation: 180,
+    //     translateY: 0,
+    //     opacity:1,
+    //     duration: 3,
+    //     scrollTrigger: '.triggerSrcoll'
+    //   }
+    // );
+   gsap.fromTo(el,{
+    translateY : -100,
+    opacity : 0
+   },
+   {
+    translateY : 0,
+    opacity : 1,
+    duration : 3,
+    scrollTrigger :{
+      trigger : '.triggerSrcoll'
+    }
+   })
+  }, []);
   return (
     <div className='salePage--NoiDungKhoaHoc'>
     <div className='salePage--NoiDungKhoaHoc__title'>
@@ -11,7 +43,7 @@ export default function PageNoiDungKhoaHoc() {
     </div>
         <h3>Nội dung khoá học</h3>
     </div>
-    <div className='salePage--NoiDungKhoaHoc__content'>
+    <div ref={imgRef} className='salePage--NoiDungKhoaHoc__content '>
     <Collapse  size='large'  >
       <Panel  header="Tháng đầu tiên" key="1">
         <p>Đây là tháng tạo thói quen học tập và sử dụng tiếng Anh cho bạn.<br />
@@ -23,7 +55,7 @@ Bạn sẽ bất ngờ khi lượng từ vựng bạn vừa học sẽ được 
 Bạn sẽ không cần phải làm các bài test đầu vào, vì nó tốn thời gian và không mang lại lợi ích gì cả. </p>
       </Panel>
       </Collapse>
-      <Collapse  size='large'  >
+      <Collapse   size='large'  >
       <Panel  header="Tháng thứ 2&3" key="1">
         <p>
         Tiếp tục duy trì thói quen học tập.<br />
@@ -44,7 +76,7 @@ Lượng từ vựng vẫn tiếp tục được nạp vào ở giai đoạn nà
 </p>
       </Panel>
       </Collapse>
-      <Collapse  size='large'  >
+      <Collapse className='triggerSrcoll'  size='large'  >
       <Panel  header="Tháng cuối cùng" key="1">
         <p>
         Bạn sẽ được học những từ vựng cuối cùng của khóa học.<br />

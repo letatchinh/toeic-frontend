@@ -27,8 +27,8 @@ export default function Home() {
       <div>
         <VideoHomePage/>
       </div>
-      <Row gutter={16}> 
-      <Col span={12}>
+      <Row className='BoxCourse' gutter={16}> 
+      <Col span={10}>
       <div className='columnBox'>
      <Carousel autoplay dots={false}>
      <CardBlog />
@@ -42,9 +42,9 @@ export default function Home() {
       </Carousel>
       </div>
       </Col>
-      <Col span={12}>
+      <Col span={10}>
       <div className='columnBox'>
-     <Carousel autoplay dots={false}>
+     <Carousel  autoplay dots={false}>
     
      <CardBlogMultiImage />
       <CardBlogMultiImage />

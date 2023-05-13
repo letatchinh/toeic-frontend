@@ -14,9 +14,9 @@ export default function index() {
     <PageCaiThien />
     <PageDauTuHocPhi />
     <PageConDuong />
+    <PageNoiDungKhoaHoc/>
     <PageDatDuoc />
     <PageSoHuu />
-    <PageNoiDungKhoaHoc/>
    </div>
 
   )
