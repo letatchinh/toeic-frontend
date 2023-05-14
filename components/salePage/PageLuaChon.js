@@ -33,7 +33,7 @@ export default function PageLuaChon() {
    </p>
    </div>
    <div  className='salePage--LuaChon__content'>
-  <p className='cac'>
+  <p >
   Với Toeic 600+ (mất gốc → nâng cao), bạn sẽ không cần phải chọn.<br/>
 Là công cụ đắc lực hỗ trợ trong công việc và học tập, trong khi lại TIẾT KIỆM cho bạn rất nhiều THỜI GIAN và  TIỀN BẠC. <br/>
 Không hề ảnh hưởng đến công việc và học tập, đồng thời hỗ trợ bạn ngay tại thời điểm bạn nạp kiến thức của Hoàng Toeic.<br/>
