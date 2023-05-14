@@ -1,6 +1,4 @@
-import { Collapse, Image } from 'antd'
-import { getImgFromAssets } from 'libs/hook'
-import React, { useEffect, useRef } from 'react'
+import { Collapse } from 'antd'
 const {Panel} = Collapse
 
 export default function PagePhanQua() {

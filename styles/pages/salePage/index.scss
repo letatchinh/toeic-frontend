@@ -1,10 +1,14 @@
 $maxHeight : 920px;
 $heightmaxScreen : 100vh;
 $fontReem : Reem Kufi Ink;
+html{
+    scroll-behavior: smooth;
+}
 .gachCheo{
     text-decoration: line-through;
 }
 .salePage{
+    
     & p ,a,span,h3{
         font-family: $fontReem!important;
     }
@@ -246,8 +250,8 @@ $fontReem : Reem Kufi Ink;
     background-image: url('/assets/images/salePage/backgroup2.png');
     // background-size: 100%;
     background-repeat: no-repeat;
-    height: $heightmaxScreen;
-    max-height: $maxHeight;
+    // height: $heightmaxScreen;
+    // max-height: $maxHeight;
     padding: 50px 100px;
     &__title{
         position: relative;
@@ -313,6 +317,7 @@ $fontReem : Reem Kufi Ink;
         padding: 50px 0;
         & .ant-collapse{
             margin-bottom: 30px;
+            border-color: black!important;
         }
         & .ant-collapse-header{
             align-items: center!important;
@@ -325,5 +330,153 @@ $fontReem : Reem Kufi Ink;
             }
         }
     }
+   }
+   &--LuuY{
+    padding: 80px 50px;
+    position: relative;
+    display: flex;
+    // height: $heightmaxScreen;
+    // max-height: $maxHeight;
+   &__bg{
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+    z-index: -1;
+    background-image: url('/assets/images/salePage/backgroup.png');
+  background-size: 80%;
+   }
+  &__left{
+    width: 60%;
+    height: max-content;
+    padding: 20px 10px;
+    border: 3px solid black;
+        background-color: #EDDB3E;
+    &__title{
+        // text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+    }
+    &__content{
+        
+        font-size: 26px;
+        // text-align: center;
+    }
+    &__link{
+        color: red;
+    }
+  }
+  &__right{
+    // width:  30%;    
+    flex: 1;
+    height: max-content;
+    object-fit: contain;
+    position: sticky;
+    top:-100px;
+    margin-top: -100px;
+    margin-right: -60px;
+    overflow: hidden;
+    &>div{
+        overflow: hidden;
+        height: calc(100vh + 40px ) ;
+    }
+    img{
+        // margin-inline: 0 190px;
+        height: calc(100vh + 200px) !important;
+        filter: drop-shadow(3px 0 9px rgb(130, 129, 129) );
+    }
+//    position: absolute;
+//    bottom: 0;
+//    right: -20%;
+//    width: 1200px;
+  }
+
+   }
+   &--LuaChon{
+    height: $heightmaxScreen;
+    max-height: $maxHeight;
+    background-color: #303030;
+    position: relative;
+    &__title {
+        padding: 50px 100px 10px 100px;
+        z-index: 1;
+        & p{
+            color: white;
+            font-size: 40px;
+            text-align: center;
+        }
+    }
+    &__content {
+        padding: 20px 145px;
+        z-index: 1;
+       text-align: center;
+       line-height: 1.8;
+        & p{
+            color: white;
+            font-size: 24px;
+        }
+    }
+    
+   
+}
+&--PhuHop{
+    padding: 80px 50px;
+    position: relative;
+    display: flex;
+    // height: $heightmaxScreen;
+    // max-height: $maxHeight;
+   &__bg{
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: #C2227C;
+    background-image: url('/assets/images/salePage/backgroup2.png');
+  background-size: 80%;
+   }
+  &__left{
+    order: 2;
+    width: 65%;
+    height: max-content;
+    padding: 20px 10px;
+    border: 3px solid black;
+        background-color: white;
+    &__title{
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        padding: 10px 0;
+    }
+    &__content{
+        
+        font-size: 26px;
+        text-align: center;
+    }
+    &__link{
+        color: red;
+    }
+  }
+  &__right{
+    order: 1;
+    // width:  30%;    
+    flex: 1;
+    height: max-content;
+    object-fit: contain;
+    position: sticky;
+    top:-0px;
+    &>div{
+        margin-left: -120px;
+        overflow: hidden;
+        height: calc(100vh + 20px ) ;
+    }
+    img{
+        // margin-inline: 0 190px;
+        height: calc(100vh + 200px) !important;
+        filter: drop-shadow(3px 0 9px rgb(130, 129, 129) );
+    }
+//    position: absolute;
+//    bottom: 0;
+//    right: -20%;
+//    width: 1200px;
+  }
+
    }
 }

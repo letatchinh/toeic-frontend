@@ -1,10 +1,25 @@
 import { Image } from 'antd'
 import { getImgFromAssets } from 'libs/hook'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 export default function PageSoHuu() {
+  const ref = useRef()
+  const [visible,setVisible] = useState(false)
+  console.log(visible,"visible");
+  useEffect(() => {
+      const obsever = new IntersectionObserver((entries) => {
+          const entry   = entries[0]
+          console.log(entry,'entry');
+          const {isIntersecting} = entry
+          console.log(isIntersecting,"isIntersecting");
+          if(isIntersecting) setVisible(true)
+      })
+      !visible && obsever.observe(ref.current)
+  },[])
   return (
-    <div className='salePage--SoHuu'>
+    <>
+      <div ref={ref}></div>
+      {visible &&  <div className='salePage--SoHuu'>
     <div className='salePage--SoHuu__people'>
         <Image preview={false} src={getImgFromAssets('salePage/img3.png')}/>
     </div>
@@ -25,6 +40,8 @@ Chỉ với <span>2triệu  900k</span> cho toàn bộ quá trình học tận 5
 Rất nhiều phần quà giá trị phía bên dưới…
         </p>
     </div>
-    </div>
+    </div>}
+    </>
+   
   )
 }
