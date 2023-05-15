@@ -1,13 +1,45 @@
 import { Image } from 'antd'
-import React from 'react'
-
+import gsap from 'gsap';
+import React, { useEffect, useRef } from 'react'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 export default function PageConDuong() {
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+  useEffect(() => {
+    const left = leftRef.current;
+    const right = rightRef.current;
+   gsap.fromTo(left,{
+    translateX : -100,
+    opacity : 0
+   },
+   {
+    translateX : 0,
+    opacity : 1,
+    duration : 1.5,
+    scrollTrigger :{
+      trigger : '.triggerSrcollConDuong'
+    }
+   })
+   gsap.fromTo(right,{
+    translateX : 100,
+    opacity : 0
+   },
+   {
+    translateX : 0,
+    opacity : 1,
+    duration : 1.5,
+    scrollTrigger :{
+      trigger : '.triggerSrcollConDuong'
+    }
+   })
+  }, []);
   return (
-    <div className='salePage--ConDuong'>
+    <div className='salePage--ConDuong triggerSrcollConDuong'>
     <div  className='salePage--ConDuong__bg'>
 
     </div>
-    <div className='salePage--ConDuong__left'>
+    <div ref={leftRef} className='salePage--ConDuong__left'>
     <p className='salePage--ConDuong__left__title'>
     Đây là con đường Ngắn Nhất, Dễ Nhất
     <br/>
@@ -29,7 +61,7 @@ Nếu bạn muốn trải nghiệm?
 <a  className='salePage--ConDuong__left__link' href='#'>[Nhấn vào đây để trở thành học viên]</a>
     </p>
     </div>
-    <div className='salePage--ConDuong__right'>
+    <div ref={rightRef}  className='salePage--ConDuong__right'>
    <Image preview={false} src='/assets/images/salePage/im2.png'/>
     </div>
     </div>
