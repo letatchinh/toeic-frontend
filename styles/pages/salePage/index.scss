@@ -30,16 +30,40 @@ html {
     position: relative;
     line-height: 5rem;
     text-align: center;
-    padding-right: 20rem;
+    // padding-right: 20rem;
     letter-spacing: 1px;
     &__image {
-      position: absolute;
-      bottom: 0;
-      left: -15%;
-      width: 1100px;
+      // width:  30%;
+      flex: 1;
+      // height: max-content;
+      object-fit: contain;
+      position: sticky;
+      top: -100px;
+      margin-top: -100px;
+      margin-right: -60px;
+      overflow: hidden;
+      // & > div {
+      //   overflow: hidden;
+      //   height: calc(100vh + 40px);
+      // }
+      img {
+        // margin-inline: 0 190px;
+        height: calc(100vh) !important;
+        filter: drop-shadow(3px 0 9px rgb(130, 129, 129));
+      }
+      //    position: absolute;
+      //    bottom: 0;
+      //    right: -20%;
+      //    width: 1200px;
     }
+    // &__image {
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: -15%;
+    //   width: 1100px;
+    // }
     &__text {
-      width: 49%;
+      width: 50%;
       & .classic {
         font-size: 3rem;
       }
@@ -146,10 +170,28 @@ html {
       }
     }
     &__right {
-      position: absolute;
-      bottom: 0;
-      right: -20%;
-      width: 1200px;
+      // position: absolute;
+      // bottom: 0;
+      // right: -20%;
+      // width: 1200px;
+       // width:  30%;
+       flex: 1;
+      //  height: max-content;
+       object-fit: contain;
+       position: sticky;
+      //  top: -100px;
+       margin-top: -200px;
+       margin-right: -60px;
+       overflow: hidden;
+       // & > div {
+       //   overflow: hidden;
+       //   height: calc(100vh + 40px);
+       // }
+       img {
+         // margin-inline: 0 190px;
+         height: calc(100vh + 50px) !important;
+         filter: drop-shadow(3px 0 9px rgb(130, 129, 129));
+       }
     }
   }
 
@@ -703,4 +745,154 @@ html {
   }
   .order1{
     order: 1;
+  }
+
+  @media screen and (max-width: $md){
+      .salePage{
+        &>div{
+          overflow: hidden;
+        }
+        &--intro {
+          flex-direction: column;
+          justify-content: space-between!important;
+          &__image {
+            order: 2;
+          display: flex;
+          align-items: flex-end;
+            img {
+              height: calc(80vw)!important;
+            }
+          }
+          
+          &__text {
+            width: 95%;
+            order: 1;
+            & .classic {
+              font-size: 20px!important;
+            }
+            & .bold {
+              font-size: 3.5rem!important;
+              & .bgBlack {
+               
+              }
+            }
+          }
+        }
+        &--pageCaiThien {
+          &__pen {
+           
+          }
+          &__icon {
+          display: none;
+          }
+          &__title {
+          
+            & p {
+              font-size: 3rem;
+            }
+          }
+          &__content {
+            padding: 20px 10px!important;
+            & p {
+              font-size: 2.4rem;
+            }
+            & p:last-child {
+              font-size: 2.4rem;
+            }
+          }
+        }
+        &--DauTuHocPhi {
+          &__box {
+            padding: 20px!important;
+            &__title {
+              font-size: 3rem;
+              // font-weight: 700;
+              text-align: center;
+            }
+            &__content {
+              font-size:2rem;
+            }
+          }
+        }
+        &--ConDuong {
+          padding: 20px!important;
+          flex-direction: column;
+          &__bg {
+          }
+          &__left {
+            width: 100%;
+            &__title {
+              font-size: 3rem;
+            }
+            &__content {
+              font-size: 2.4rem;
+            }
+            &__link {
+            }
+          }
+          &__right {
+            margin-top: -10rem!important;
+            margin-right: 5rem;
+             img {
+              height: 50vh!important;
+             }
+          }
+        }
+        &--DatDuoc {
+         padding: 10px!important;
+         gap: 10px!important;
+         max-height: max-content!important;
+         height: max-content!important;
+          &__left {
+           width: 30%;
+           text-align: center;
+            & p {
+              font-size: 3rem;
+            }
+          }
+          &__right {
+           
+            &__item {
+            
+              &__img {
+               
+              }
+              &__title p {
+                font-size: 2.4rem;
+              }
+            }
+          }
+        }
+        &--NoiDungKhoaHoc {
+          padding: 20px 5px!important;
+          &__title {
+            margin-bottom: 30px;
+            &__bg {
+              
+                position: absolute;
+                width: 100%!important;
+                top: -126%!important;
+                transform: rotate(5deg);
+                left: 7%!important;
+                z-index: 0;
+            
+            }
+            & h3 {
+              font-size: 4rem;
+            }
+          }
+          &__content {
+            padding: 5px!important;
+            & .ant-collapse {
+            }
+            & .ant-collapse-header {
+            }
+            & .ant-collapse {
+              & .ant-collapse-header-text,
+              .ant-collapse-expand-icon {
+              }
+            }
+          }
+        }
+      }
   }

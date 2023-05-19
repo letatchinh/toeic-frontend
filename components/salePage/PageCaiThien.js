@@ -4,49 +4,49 @@ import { Image } from 'antd';
 export default function PageCaiThien() {
   return (
     <div className='salePage--pageCaiThien'>
-    <div className='salePage--pageCaiThien__pen' style={{width : '40px',transform : 'rotate(-145deg) translate(-200px, 100px)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '3%',transform : 'rotate(-145deg) translate(-200px, 100px)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '40px',transform : 'rotate(-145deg) translate(-350px, 100px)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '3%',transform : 'rotate(-145deg) translate(-350px, 100px)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '40px',transform : 'rotate(-145deg) translate(-60rem, 30rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '3%',transform : 'rotate(-145deg) translate(-60rem, 30rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '40px',transform : 'rotate(-145deg) translate(-50rem, 30rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '3%',transform : 'rotate(-145deg) translate(-50rem, 30rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '30px',transform : 'rotate(-155deg) translate(-80rem, -10rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '2%',transform : 'rotate(-155deg) translate(-80rem, -10rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '30px',transform : 'rotate(-155deg) translate(-80rem, 10rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '2%',transform : 'rotate(-155deg) translate(-80rem, 10rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '30px',transform : 'rotate(-155deg) translate(-120rem, 10rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '2%',transform : 'rotate(-155deg) translate(-120rem, 10rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '40px',transform : 'rotate(-155deg) translate(-90rem, 10rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '3%',transform : 'rotate(-155deg) translate(-90rem, 10rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '40px',transform : 'rotate(-155deg) translate(-90rem, 30rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '3%',transform : 'rotate(-155deg) translate(-90rem, 30rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '40px',transform : 'rotate(-155deg) translate(-120rem, 40rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '3%',transform : 'rotate(-155deg) translate(-120rem, 40rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '40px',transform : 'rotate(-150deg) translate(-100rem, 30rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '3%',transform : 'rotate(-150deg) translate(-100rem, 30rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '30px',transform : 'rotate(-155deg) translate(-80rem, -10rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '2%',transform : 'rotate(-155deg) translate(-80rem, -10rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '40px',transform : 'rotate(-205deg) translate(-15rem, -50rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '3%',transform : 'rotate(-205deg) translate(-15rem, -50rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '40px',transform : 'rotate(-205deg) translate(5rem, -50rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '3%',transform : 'rotate(-205deg) translate(5rem, -50rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
-    <div className='salePage--pageCaiThien__pen' style={{width : '40px',transform : 'rotate(-205deg) translate(-30rem, -50rem)'}}>
+    <div className='salePage--pageCaiThien__pen' style={{width : '3%',transform : 'rotate(-205deg) translate(-30rem, -50rem)'}}>
         <Image preview={false} src={'/assets/images/salePage/pencils.svg'}/>
     </div>
     <div className='salePage--pageCaiThien__icon'>

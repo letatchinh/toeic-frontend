@@ -21,8 +21,8 @@ export default function index() {
     <PageCaiThien />
     <PageDauTuHocPhi />
     <PageConDuong />
-    <PageNoiDungKhoaHoc/>
     <PageDatDuoc />
+    <PageNoiDungKhoaHoc/>
     <PageSoHuu />
     <PagePhanQua />
     <PageLuuY />
