@@ -22,7 +22,7 @@ export default function PageDangKy() {
     Điền thông tin dưới đây để tham gia cùng <br />Hoàng Toeic
   
     </p>
-    <Form form={form} onFinish={onFinish} labelCol={{span : 4}} labelAlign='left'>
+    <Form form={form} onFinish={onFinish} labelCol={{lg : 4 , md : 4 , sm : 4 , xs : 6}} labelAlign='left'>
         <Form.Item label='Họ và tên'>
         <Input placeholder='_ _ _ _ _ _ _ _ _ _ _' bordered={false}/>
         </Form.Item>
