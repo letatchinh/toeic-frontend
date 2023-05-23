@@ -30,6 +30,9 @@ export default function Home() {
       <Button onClick={() => routes.push('/sale-page')}>
         Sale page ở đây nè
       </Button>
+      <Button onClick={() => routes.push('/sale-page2')}>
+        Sale page 2 ở đây nè
+      </Button>
       <div>
         <VideoHomePage/>
       </div>

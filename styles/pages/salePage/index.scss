@@ -740,6 +740,62 @@ html {
       }
     }
   }
+
+  //------SALEPAGE2--------------------------------//
+
+  &--BanCanBiet {
+    height: $heightmaxScreen;
+    max-height: $maxHeight;
+    background-color: #fedeffc2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    line-height: 5rem;
+    z-index: -1;
+    text-align: center;
+    overflow: hidden;
+    letter-spacing: 1px;
+    &__image {
+      flex: 1;
+      object-fit: contain;
+      position: sticky;
+      top: 0px;
+      margin-top: -100px;
+      margin-right: 100px;
+      img {
+        height: calc(100vh) !important;
+        filter: drop-shadow(3px 0 9px rgb(130, 129, 129));
+      }
+      &__bg{
+        position: absolute;
+        opacity: .8;
+        top: 10%;
+        right: 0%;
+      }
+    
+    }
+
+    &__text {
+      width: 40%;
+      padding: 0 50px;
+      & p {
+        font-weight: 700;
+        font-size: 4.5rem;
+        color: #B70079;
+        letter-spacing: 4px;
+      }
+      & span{
+        color: #B70079;
+        font-size: 3rem;
+      }
+    }
+    &__bg1{
+      position: absolute;
+      inset: 0;
+      opacity: .4;
+    }
+  }
 }
 .whiteBox {
   border: 3px solid black;
@@ -1199,6 +1255,48 @@ html {
           margin-bottom: 20px;
           font-weight: 700;
         }
+      }
+    }
+    &--BanCanBiet {
+      flex-direction: column;
+      &__image {
+        order: 2;
+        flex: 1;
+        object-fit: contain;
+        position: sticky;
+        top: 0px;
+        margin-top: -70px;
+        margin-right: -50px;
+         & > div {
+        // overflow: hidden;
+        height: calc(30vh);
+      }
+        img {
+          height: calc(70vh)!important;
+          filter: drop-shadow(3px 0 9px rgb(130, 129, 129));
+        }
+        &__bg{
+          position: absolute;
+          opacity: .8;
+          top: 5%;
+          left: -40%;
+          transform: scale(.5);
+        }
+      
+      }
+  
+      &__text {
+        width: 100%;
+        padding: 10px;
+        & p {
+         
+        }
+        & span{
+         
+        }
+      }
+      &__bg1{
+        opacity: 0.1;
       }
     }
   }
