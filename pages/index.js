@@ -7,7 +7,8 @@ import { Button, Carousel, Col, Row } from 'antd'
 import CardCourse from 'components/course/CardCourse.js'
 import GroupCourse from 'components/home/GroupCourse.js'
 import VideoHomePage from 'components/home/VideoHomePage.js'
-import { useRouter } from 'next/router.js'
+import { useRouter } from 'next/router.js';
+import Banner from 'components/home/Banner';
 export default function Home() {
   const routes = useRouter()
   console.log(routes,'routes');
@@ -27,6 +28,7 @@ export default function Home() {
         />
       </Head>
       <div className='home-page'>
+      <Banner />
       <Button onClick={() => routes.push('/sale-page')}>
         Sale page ở đây nè
       </Button>
