@@ -4,15 +4,16 @@
 // @import 'header';
 
 .layout {
-  height: 100vh;
+  // height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   
   .main{
-    flex:1;
-    overflow-y: scroll;
+    // flex:1;
+    // overflow-y: scroll;
     overflow-x: hidden;
+    background-color: #ffffff;
     & .branches{
       position: fixed;
       top: 45%;

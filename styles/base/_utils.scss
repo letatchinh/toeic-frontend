@@ -36,3 +36,19 @@
   -ms-flex-pack: end !important;
   justify-content: flex-end !important; 
 }
+
+.br-tr-15{
+  border-top-right-radius: 15px;
+}
+.br-tl-15{
+  border-top-left-radius: 15px;
+}
+.br-br-15{
+  border-bottom-right-radius: 15px;
+}
+.br-bl-15{
+  border-bottom-left-radius: 15px;
+}
+.bs-primary{
+  box-shadow: 0 0px 5px 0px rgba(15, 34, 58, 0.12);
+}
