@@ -1,5 +1,5 @@
 import { Image } from 'antd'
-import Cirleviolet from 'components/comon/exportSvg/cirleviolet'
+import Cirleviolet from '../comon/exportSvg/cirleviolet'
 import React from 'react'
 
 export default function PageBanCanBiet() {
