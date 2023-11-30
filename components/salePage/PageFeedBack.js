@@ -31,7 +31,7 @@ export default function PageFeedBack() {
     </p>
     </div>
     <div className='salePage--FeedBack__Box__right order1'>
-   <Image preview={false} src='/assets/images/salePage/intro.png'/>
+   <Image preview={false} src='/assets/images/salePage/image_112.png'/>
     </div>
     </div>
         <div className='salePage--FeedBack__Box'>
@@ -41,7 +41,7 @@ export default function PageFeedBack() {
     </p>
     </div>
     <div className='salePage--FeedBack__Box__right'>
-   <Image preview={false} src='/assets/images/salePage/intro.png'/>
+   <Image preview={false} src='/assets/images/salePage/image_113.png'/>
     </div>
     </div>
 
@@ -52,7 +52,7 @@ export default function PageFeedBack() {
     </p>
     </div>
     <div className='salePage--FeedBack__Box__right order1'>
-   <Image preview={false} src='/assets/images/salePage/intro.png'/>
+   <Image preview={false} src='/assets/images/salePage/image_114.png'/>
     </div>
     </div>
 

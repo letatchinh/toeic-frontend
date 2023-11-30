@@ -29,6 +29,9 @@ export default function PageDangKy() {
         <Form.Item label='Email'>
         <Input placeholder='_ _ _ _ _ _ _ _ _ _ _' bordered={false}/>
         </Form.Item>
+        <Form.Item label='Số điện thoại'>
+        <Input placeholder='_ _ _ _ _ _ _ _ _ _ _' bordered={false}/>
+        </Form.Item>
         <Button htmlType='submit' className='submit'>Tham gia ngay</Button>
     </Form>
     </div>
