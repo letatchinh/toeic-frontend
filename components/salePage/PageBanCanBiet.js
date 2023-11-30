@@ -1,5 +1,5 @@
 import { Image } from 'antd'
-// import Cirleviolet from '../comon/exportSvg/cirleviolet'
+import Cirleviolet from '../comon/exportSvg/cirleviolet'
 import React from 'react'
 
 export default function PageBanCanBiet() {
@@ -10,7 +10,7 @@ export default function PageBanCanBiet() {
     </div>
     <div className='salePage--BanCanBiet__image'>
     <div className='salePage--BanCanBiet__image__bg'>
-    {/* <Cirleviolet /> */}
+    <Cirleviolet />
     </div>
         <Image preview={false} src='/assets/images/salePage/IMG_0434.png'/>
     </div>
