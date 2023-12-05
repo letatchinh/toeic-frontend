@@ -927,13 +927,12 @@ html {
   }
 
   &--Letter {
-  
     position: sticky;
     top: 40rem;
     height: calc(100vh - 300px);
     z-index: 25;
-    &__bgUp{
-      background-image: url('/assets/images/salepage2/TamGiacHong.svg');
+    &__bgUp {
+      background-image: url("/assets/images/salepage2/TamGiacHong.svg");
       background-repeat: no-repeat;
       background-size: 100%;
       position: sticky;
@@ -971,7 +970,6 @@ html {
         transform-origin: top right;
         // box-shadow: 0 2px 4px 2px rgba(15, 34, 58, 0.12);
       }
-    
     }
     &__content {
       position: relative;
@@ -1005,7 +1003,7 @@ html {
     letter-spacing: 1px;
     position: relative;
     z-index: 1;
-  padding: 20px 50px;
+    padding: 20px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1021,25 +1019,25 @@ html {
     //     height: 100%;
     //   }
     // }
-    &__bg1{
+    &__bg1 {
       position: absolute;
       top: 15rem;
       left: -5rem;
       width: 200px;
       height: 200px;
-      background-image: url('/assets/images/salepage2/paper.svg');
+      background-image: url("/assets/images/salepage2/paper.svg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
       z-index: -1;
     }
-    &__bg2{
+    &__bg2 {
       position: absolute;
       top: 10rem;
       right: -50px;
       width: 300px;
       height: 500px;
-      background-image: url('/assets/images/salepage2/sl.svg');
+      background-image: url("/assets/images/salepage2/sl.svg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -1048,16 +1046,16 @@ html {
     &__left {
       flex: 1;
       padding-left: 20px;
-      border: 5px solid #363E83;
+      border: 5px solid #363e83;
       background-color: white;
-      &__title{
+      &__title {
         font-size: 40px;
       }
-      &__content{
+      &__content {
         font-size: 24px;
       }
       & p {
-        color: #363E83;
+        color: #363e83;
         text-align: center;
       }
     }
@@ -1066,6 +1064,56 @@ html {
       flex: 1;
       & > img {
         transform: translateX(10px);
+      }
+    }
+  }
+  // BanSeDuoc
+  &--BanSeDuoc {
+    background: linear-gradient(180deg,#FEDEFF 10%,#E0E0E0);
+    min-height: $heightmaxScreen;
+    overflow: hidden;
+    letter-spacing: 1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    &::after{
+      position: absolute;
+      content: "";
+      background-image: url("/assets/images/salepage2/nen.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &__left {
+      flex: 1;
+      padding-left: 20px;
+      & p {
+        font-size: calc(0.5vw + 28px);
+        color: #363e83;
+        text-align: center;
+      }
+    }
+    &__right {
+      flex: 1;
+      &__row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        & span {
+          font-size: calc(1vw + 10px);
+        }
+      }
+      & img {
+        width: 50px;
+        height: 50px;
       }
     }
   }

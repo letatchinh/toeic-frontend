@@ -5,6 +5,7 @@ import BanBietRang from 'components/salePage/BanBietRang'
 import React from 'react'
 import Letter from 'components/salePage/Letter'
 import HocTiengAnh from 'components/salePage/HocTiengAnh'
+import BanSeDuoc from 'components/salePage/BanSeDuoc'
 
 export default function index() {
     return (
@@ -15,6 +16,7 @@ export default function index() {
       <BanBietRang />
       <Letter />
       <HocTiengAnh />
+      <BanSeDuoc />
      </div>
   
     )
