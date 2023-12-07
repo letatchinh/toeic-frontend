@@ -622,5 +622,147 @@
       }
     }
   }
+
+  &--VayNeuBayGio {
+  
+    &::after {
+    
+    }
+
+    &__teacher {
+      top: 0;
+      width: 65%;
+      height: 70%;
+    transform: translateX(-50px);
+    &__text{
+      top: -200px;
+      right: -170px;
+      width: 350px;
+      height: 350px;
+      & p {
+        width: 60%;
+        top: 60px;
+        left: 80px;
+        font-size: 20px;
+      }
+    }
+    }
+  }
+
+  // TaiSaoLai
+  &--TaiSaoLai {
+    flex-direction: column;
+    padding-bottom: 0;
+    &__bg1 {
+      width: 100px;
+      height: 100px;
+    }
+    &__bg2 {
+      top: 20px;
+      width: 200px;
+      height: 300px;
+    }
+    &__left {
+      &__title {
+        font-size: 22px;
+      }
+      &__content {
+        font-size: 16px;
+      }
+      & p {
+      }
+    }
+    &__right {
+      display: flex;
+      align-items: flex-end;
+      flex: 1;
+      & > img {
+      }
+    }
+  }
+
+  // DayKhongphai
+  &--DayKhongphai {
+    padding: 30px 10px;
+    &__box{
+
+      &__title{
+      
+      }
+      &__boxContent{
+      width: 80%;
+        &__content{
+      
+        }
+      }
+      &__link{
+      
+      }
+    }
+  } 
+
+    // DaCoHon
+    &--DaCoHon {
+      height: unset;
+      flex-direction: column;
+      padding-bottom: 0;
+      &__bg1 {
+        width: 100px;
+        height: 100px;
+      }
+      &__bg2 {
+        top: 20px;
+        width: 200px;
+        height: 300px;
+      }
+      &__left {
+        flex-direction: row;
+        &__box{
+          flex: 1;
+        }
+        &__pin{
+          width: 300px;
+          height: 300px;
+          padding-top: 60px;
+          padding-left: 20px;
+          padding-right: 50px;
+          &__title{
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
+        &__content {
+          flex: 1;
+          font-size: 20px;
+        }
+        & p {
+        }
+      }
+      &__right {
+        display: flex;
+        align-items: flex-end;
+        flex: 1;
+        & > img {
+        }
+      }
+    }
+      // Qa
+      &--Qa {
+        background-color: #303030;
+        &__title{
+          font-size: calc(2vw + 14px);
+        }
+        &__content{
+          padding: 20px 0;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          & p {
+            font-size: calc(2vw + 10px);
+            letter-spacing: 1px;
+            font-weight: 700;
+          }
+        }
+      }
   }
 }

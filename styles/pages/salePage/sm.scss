@@ -1,0 +1,50 @@
+@media screen and (max-width: $sm) {
+    .salePage {
+      // & > div {
+      //   overflow: hidden;
+      // }
+  
+      // DaCoHon
+      &--DaCoHon {
+    
+        &__bg1 {
+          width: 100px;
+          height: 100px;
+        }
+        &__bg2 {
+          top: 20px;
+          width: 200px;
+          height: 300px;
+        }
+        &__left {
+            flex-direction: column;
+            &__box{
+                flex: unset;
+              }
+          &__pin{
+            width: 300px;
+            height: 300px;
+            padding-top: 60px;
+            padding-left: 20px;
+            padding-right: 50px;
+            &__title{
+              font-size: 20px;
+              font-weight: 700;
+            }
+          }
+          &__content {
+            font-size: 20px;
+          }
+          & p {
+          }
+        }
+        &__right {
+          display: flex;
+          align-items: flex-end;
+          flex: 1;
+          & > img {
+          }
+        }
+      }
+    }
+  }
