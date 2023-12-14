@@ -21,11 +21,11 @@ export default function Home() {
         </title>
         <meta
           name='description'
-          content={`Hỗ trợ đặt thuốc online, liên kết các phòng khám, trung tâm xét nghiệm, và chăm sóc sức khỏe tại nhà.`}
+          content={`Hoàng Toeic Đạt nguyễn văn`}
         />
-        <meta
+         <meta
           name='keywords'
-          content={`worldcare, world health, mua thuốc online, đặt lịch khám, phòng khám chuyên khoa, chăm sóc mẹ và bé, điều dưỡng`}
+          content={['Hello','Hoàng Toeic Đạt nguyễn văn','toeic da nang','toeic sai gon'].join(',')}
         />
       </Head>
       <div className='home-page'>
